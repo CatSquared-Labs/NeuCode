@@ -35,8 +35,8 @@
   "modes": {
       "window": {
       "title": "neucode",
-      "width": 800,
-      "height": 1000,
+      "width": 1000,
+      "height": 800,
       "center": true,
       "fullScreen": false,
       "alwaysOnTop": false,
