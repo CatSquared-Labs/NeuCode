@@ -20,8 +20,6 @@ NeuCode is an open source lightweight IDE that is PERFECT for uses like: develop
 
 **On Arch based distros:**
 
-warning: i am still trying to get NeuCode on the AUR so if it doesn't work you either don't have yay or the package still isn't available
-
 ```bash
 yay -S NeuCode
 ```

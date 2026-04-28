@@ -1,0 +1,109 @@
+:root {
+    --bg: #1a1b26;        /* Deep night background */
+    --sidebar: #16161e;   /* Darker sidebar */
+    --accent: #7aa2f7;    /* Electric blue accent */
+    --text: #a9b1d6;      /* Soft grey-blue text */
+    --cursor: #c0caf5;    /* Bright cursor */
+    --line-num-text: #414868; 
+    --red: #ed1515;       /* Kate Red */
+    --green: #11d111;     /* Kate Green */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#toolbar {
+    background: var(--sidebar);
+    color: var(--accent);
+    padding: 8px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    border-bottom: 1px solid #24283b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background: #1e1e2e;
+    border: 1px solid #444;
+    color: white;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+button:hover {
+    border-color: var(--accent);
+}
+
+#editor-shell {
+    display: flex;
+    flex: 1; 
+    overflow: hidden;
+}
+
+/* THE GUTTER (Line Numbers) */
+#line-numbers {
+    width: 60px;
+    background: var(--sidebar);
+    color: var(--line-num-text);
+    padding: 20px 0; /* MUST match textarea padding */
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px; /* MUST match textarea font-size */
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual line number entry */
+.line-num {
+    padding-right: 10px;
+    line-height: 1.6; /* MUST match textarea line-height */
+    border-left: 3px solid transparent; /* The Kate Indicator */
+}
+
+.line-num.unsaved {
+    border-left-color: var(--red);
+    color: var(--text);
+}
+
+.line-num.saved {
+    border-left-color: var(--green);
+}
+
+/* THE EDITOR */
+#main-editor {
+    flex: 1;
+    background: transparent;
+    color: var(--text); /* Fixed from #000000 */
+    caret-color: var(--accent);
+    line-height: 1.6;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 20px; /* Match #line-numbers padding */
+    font-family: 'JetBrains Mono', monospace;
+    resize: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #3b4261; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }

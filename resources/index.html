@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>neucode</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Toolbar -->
+        <div id="toolbar">
+            <button class="tool-btn" onclick="openFile()">Open</button>
+            <button class="tool-btn" onclick="saveFile()">Save</button>
+            <div style="flex:1"></div>
+            <span id="title-bar-text">NeuCode v0.1</span>
+            <!-- Kate Tab -->
+            <div id="tab-bar">
+
+            </div>
+        </div>
+
+
+
+        <!-- Breadcrumbs -->
+        <div id="breadcrumbs"></div>
+
+        <!-- Editor Area -->
+        <div id="editor-shell">
+            <div id="line-numbers"></div>
+            <textarea id="main-editor" spellcheck="false" placeholder="Start coding..."></textarea>
+        </div>
+
+        <!-- Status Bar -->
+        <div id="status-bar">
+            <span id="file-path"></span>
+        </div>
+    </div>
+
+    <script src="js/neutralino.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
