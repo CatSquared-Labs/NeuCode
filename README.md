@@ -18,15 +18,22 @@ NeuCode is an open source lightweight IDE that is PERFECT for uses like: develop
 
 ### Linux:
 
-**On Arch based distros:**
+**Step 1:**
 
-```bash
-yay -S NeuCode
-```
+<img alt="image" src="https://github.com/user-attachments/assets/0a85f1fd-17d9-41ca-b4e6-a3ddd0c93f35" />
 
-**On Debian based distros:**
+**Step 2:**
 
-there is currently no support for debian based distros, but that will be added soon
+<img alt="image" src="https://github.com/user-attachments/assets/2014a4a3-837d-4dfb-a8d0-fa889bc9cdce" />
+
+**Step 3:**
+
+Extract the file
+
+**Step 4:**
+
+Run the file `NeuCode_x64`
+
 
 ### Windows:
 
