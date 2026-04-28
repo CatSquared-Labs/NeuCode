@@ -11,6 +11,13 @@ let currentFile = null;
 let lineStates = []; // 0: Normal, 1: Modified (Red), 2: Saved (Green)
 
 
+// event functions
+
+Neutralino.events.on("windowClose", () => {
+    Neutralino.app.exit();
+});
+
+// function functions
 
 function updateLines() {
     const lines = editor.value.split('\n');
