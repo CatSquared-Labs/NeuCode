@@ -32,16 +32,30 @@ Extract the file
 
 **Step 4:**
 
-Run the file `NeuCode_x64`
+Run the file `NeuCode_linux_x64`
 
 
 ### Windows:
 
-You currently can't install NeuCode on windows, but that will be added soon!
+**Step 1:**
+
+<img alt="image" src="https://github.com/user-attachments/assets/dbc17d23-ee13-46ff-a3d3-3ab80fdf04b3" />
+
+**Step 3:**
+
+<img alt="image" src="https://github.com/user-attachments/assets/f10ec0c4-e0fc-48c2-bbf2-dea16aaee959" />
+
+**Step 3:**
+
+Extract the file
+
+**Step 4:**
+
+Run the file `NeuCode_windows_x64.exe`
 
 ### MacOS
 
-There will be no support for MacOS ever in NeuCode, because fuck apple.
+There will be no support for MacOS ever in NeuCode, because f*ck apple.
 
 ## License
 
