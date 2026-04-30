@@ -1,0 +1,9 @@
+{
+    "type": "code",
+    "rules": {
+        "comment_trigger": "//",
+        "color_change_trigger": ["."],
+        "keywords": ["int", "function", "elif", "while", "else", "return"],
+        "types": ["int", "float", "let", "const", "double", "string", "bool"]
+    }
+}

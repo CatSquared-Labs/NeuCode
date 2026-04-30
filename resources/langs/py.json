@@ -1,0 +1,9 @@
+{
+    "type": "code",
+    "rules": {
+        "comment_trigger": "#",
+        "color_change_trigger": ["."],
+        "keywords": ["def", "elif", "while", "else", "pass", "return", "import", "from", "as", "class"],
+        "types": [":int", ":float", ":double", ":string", ":bool"]
+    }
+}
