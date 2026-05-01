@@ -6,8 +6,7 @@ NeuCode is a simple and lightweight IDE made in neutralino.js.
 
 ## Preview
 
-
-![preview](https://github.com/user-attachments/assets/5f449076-eb79-4e04-a747-07f0bffd32ea)
+![preview](https://github.com/user-attachments/assets/72b6fb87-d396-4305-8c6f-0a9db10b5dca)
 
 
 ## Why NeuCode
