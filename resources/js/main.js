@@ -12,6 +12,22 @@ let currentFolder = null;
 let lineStates = [];
 let currentSyntaxConfig = null;
 
+function toggleMenu(menuId) {
+    document.getElementById(menuId).classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks anywhere else
+window.onclick = function(event) {
+    if (!event.target.matches('.tool-btn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
 
 // --- EVENTS ---
 
