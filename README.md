@@ -60,3 +60,6 @@ There will be no support for MacOS ever in NeuCode, because f*ck apple.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Our Discord:
+Join our discord server: [https://discord.gg/6b2d7kBcGx](https://discord.gg/6b2d7kBcGx)
