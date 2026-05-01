@@ -35,15 +35,15 @@
   "modes": {
       "window": {
       "title": "neucode",
-      "width": 1000,
-      "height": 800,
+      "width": 800,
+      "height": 600,
       "center": true,
       "fullScreen": false,
       "alwaysOnTop": false,
       "icon": "/resources/icons/appIcon.png",
       "enableInspector": false,
       "borderless": false,
-      "maximize": false,
+      "maximize": true,
       "hidden": false,
       "resizable": true,
       "exitProcessOnClose": false

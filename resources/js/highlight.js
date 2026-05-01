@@ -119,22 +119,3 @@ function updateLines() {
     lineNums.innerHTML = html;
 }
 
-async function openFile() {
-    let entries = await Neutralino.os.showOpenDialog('Open File');
-    if (entries.length > 0) {
-        currentFile = entries[0];
-        const content = await Neutralino.filesystem.readFile(currentFile);
-        editor.value = content;
-        
-        const ext = currentFile.split('.').pop();
-        await loadSyntaxConfig(ext);
-
-        lineStates = []; 
-        updateLines();
-        applyHighlight();
-        
-        const parts = currentFile.split('/').filter(p => p.length > 0);
-        document.getElementById('active-tab-name').innerText = parts[parts.length - 1];
-        breadcrumbs.innerText = parts.join('  ›  ');
-    }
-}

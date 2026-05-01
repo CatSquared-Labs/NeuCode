@@ -3,23 +3,15 @@ Neutralino.init();
 const editor = document.getElementById('main-editor');
 const highlightLayer = document.getElementById('highlight-layer');
 const lineNums = document.getElementById('line-numbers');
-const breadcrumbs = document.getElementById('breadcrumbs');
+const fileTree = document.getElementById('file-tree');
+const folderPathLabel = document.getElementById('folder-path');
 const pathDisplay = document.getElementById('file-path');
 
 let currentFile = null;
+let currentFolder = null;
 let lineStates = [];
 let currentSyntaxConfig = null;
 
-async function saveFile() {
-    if (!currentFile) currentFile = await Neutralino.os.showSaveDialog('Save File');
-    if (currentFile) {
-        await Neutralino.filesystem.writeFile(currentFile, editor.value);
-        lineStates = lineStates.map(state => state === 1 ? 2 : state);
-        updateLines();
-        pathDisplay.innerText = "Saved";
-        setTimeout(() => pathDisplay.innerText = "", 3000);
-    }
-}
 
 // --- EVENTS ---
 
