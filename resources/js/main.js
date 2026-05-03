@@ -29,7 +29,33 @@ window.onclick = function(event) {
     }
 }
 
+// Sync scrolling between the master editor and the accessory layers
+editor.addEventListener('scroll', () => {
+    // 1. Sync the Neon Highlight Layer (Vertical AND Horizontal)
+    highlightLayer.scrollTop = editor.scrollTop;
+    highlightLayer.scrollLeft = editor.scrollLeft;
+
+    // 2. Sync the Line Numbers Gutter (Vertical ONLY)
+    lineNums.scrollTop = editor.scrollTop;
+});
+
 // --- EVENTS ---
+
+// Plugin Key Listener
+window.addEventListener('keydown', (e) => {
+    handlePluginShortcuts(e);
+});
+
+// Initialization
+Neutralino.events.on("ready", () => {
+    console.log("NeuCode Ready.");
+    // Setup file explorer buttons
+    const newFileBtn = document.getElementById('new-file-btn');
+    const newFolderBtn = document.getElementById('new-folder-btn');
+    
+    if (newFileBtn) newFileBtn.addEventListener('click', createNewFile);
+    if (newFolderBtn) newFolderBtn.addEventListener('click', createNewFolder);
+});
 
 Neutralino.events.on("windowClose", () => { Neutralino.app.exit(); });
 

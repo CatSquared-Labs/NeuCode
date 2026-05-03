@@ -32,6 +32,50 @@ function getEntryPath(entry, parentPath) {
     return `${parentPath.replace(/\\/g, '/')}/${name}`;
 }
 
+async function createNewFile() {
+    if (!currentFolder) {
+        alert('Please open a folder first');
+        return;
+    }
+    
+    const fileName = prompt('Enter file name:');
+    if (!fileName) return;
+    
+    const filePath = `${currentFolder.replace(/\\$/g, '/')}/${fileName}`;
+    
+    try {
+        await Neutralino.filesystem.writeFile(filePath, '');
+        // Refresh the file tree
+        fileTree.innerHTML = '';
+        await loadDirectory(currentFolder, fileTree);
+    } catch (error) {
+        alert(`Error creating file: ${error.message}`);
+        console.error('File creation error:', error);
+    }
+}
+
+async function createNewFolder() {
+    if (!currentFolder) {
+        alert('Please open a folder first');
+        return;
+    }
+    
+    const folderName = prompt('Enter folder name:');
+    if (!folderName) return;
+    
+    const folderPath = `${currentFolder.replace(/\\$/g, '/')}/${folderName}`;
+    
+    try {
+        await Neutralino.filesystem.createDirectory(folderPath);
+        // Refresh the file tree
+        fileTree.innerHTML = '';
+        await loadDirectory(currentFolder, fileTree);
+    } catch (error) {
+        alert(`Error creating folder: ${error.message}`);
+        console.error('Folder creation error:', error);
+    }
+}
+
 async function loadDirectory(folderPath, container, depth = 0) {
     try {
         const rawEntries = await Neutralino.filesystem.readDirectory(folderPath);
