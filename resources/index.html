@@ -8,20 +8,29 @@
 <body>
     <div id="app">
         <!-- Toolbar -->
-        <div id="toolbar">
-            <button class="tool-btn" onclick="openFile()">Open File</button>
-            <button class="tool-btn" onclick="saveFile()">Save</button>
-            <button class="tool-btn" onclick="openFolder()">Open Folder</button>
-            <div style="flex:1"></div>
-            <span id="title-bar-text">NeuCode v0.3.0|</span>
-            <div id="tab-bar"><span id="active-tab-name">new file</span></div>
+    <div id="toolbar">
+        <div class="menu-item">
+            <button class="tool-btn" id="file-btn" onclick="toggleMenu('file-menu')">File</button>
+            <div id="file-menu" class="dropdown-content">
+                <button onclick="openFile()">Open File</button>
+                <button onclick="openFolder()">Open Folder</button>
+                <div class="menu-sep"></div>
+                <button onclick="saveFile()">Save</button>
+                <button onclick="Neutralino.app.exit()">Exit</button>
+            </div>
         </div>
-
+        <div style="flex:1"></div>
+        <span id="title-bar-text">NeuCode v1.0.0</span>
+        <span id="title-bar-seperator"> | </span>
+        <div id="tab-bar"><span id="active-tab-name">new file</span></div>
+    </div>
         <div id="main-area">
             <!-- Sidebar Explorer -->
             <div id="sidebar">
                 <div id="sidebar-header">
                     <span>Explorer</span>
+                    <button class="sidebar-btn" id="new-file-btn" title="New File">📄</button>
+                    <button class="sidebar-btn" id="new-folder-btn" title="New Folder">📁</button>
                 </div>
                 <div id="folder-path">No folder opened</div>
                 <div id="file-tree"></div>
@@ -46,6 +55,7 @@
     <script src="js/neutralino.js"></script>
     <script src="js/highlight.js"></script>
     <script src="js/toolbar/file.js"></script>
+    <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/file_explorer.js"></script>
 </body>

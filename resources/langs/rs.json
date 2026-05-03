@@ -1,0 +1,9 @@
+{
+    "type": "code",
+    "rules": {
+        "comment_trigger": ["//", "///"],
+        "color_change_trigger": [".", "::", "->", "!"],
+        "keywords": ["fn", "let", "mut", "match", "impl", "trait", "use", "pub", "struct", "enum", "type", "move", "async", "await", "return", "if", "else", "loop", "for", "while"],
+        "types": ["i32", "u64", "f32", "f64", "String", "str", "bool", "Option", "Result", "usize", "isize"]
+    }
+}

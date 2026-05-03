@@ -1,0 +1,9 @@
+{
+    "type": "code",
+    "rules": {
+        "comment_trigger": ["//"],
+        "color_change_trigger": [".", ":="],
+        "keywords": ["func", "var", "const", "type", "struct", "interface", "package", "import", "return", "range", "select", "go", "chan", "defer", "if", "else", "for", "switch", "case"],
+        "types": ["int", "int64", "float64", "string", "bool", "error", "byte", "rune"]
+    }
+}

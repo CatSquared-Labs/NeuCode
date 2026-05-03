@@ -21,12 +21,49 @@ body, html {
 #app { display: flex; flex-direction: column; height: 100vh; }
 
 #toolbar {
+    display: flex;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 30px; /* Sits right under the toolbar */
+    left: 10px;
     background: var(--sidebar);
+    border: 1px solid #24283b;
+    min-width: 150px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.dropdown-content button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background: #24283b;
     color: var(--accent);
-    padding: 8px 15px;
-    font-size: 11px;
-    border-bottom: 1px solid #24283b;
-    display: flex; align-items: center;
+}
+
+.show { display: block; }
+
+#title-bar-text {
+    color: var(--accent)
+}
+
+#title-bar-seperator {
+    color: var(--accent)
+}
+
+#tab-bar {
+    color: var(--accent)
 }
 
 #main-area {
@@ -53,6 +90,26 @@ body, html {
     font-size: 12px;
     color: var(--text);
     border-bottom: 1px solid #24283b;
+    gap: 6px;
+}
+
+.sidebar-btn {
+    background: var(--bg);
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.sidebar-btn:hover {
+    background: rgba(122, 162, 247, 0.12);
+    color: var(--accent);
 }
 
 #folder-path {
@@ -137,6 +194,7 @@ body, html {
     color: var(--line-num-text);
     padding: 20px 0;
     text-align: right;
+    overflow: hidden;
     user-select: none;
 }
 
@@ -156,6 +214,10 @@ body, html {
     background-color: #16161e;
     color: var(--accent);
     border: 2px solid #24283b;
+}
+
+.tool-btn:hover {
+    border: 2px solid var(--accent);
 }
 
 #main-editor, #highlight-layer {

@@ -1,0 +1,9 @@
+{
+    "type": "code",
+    "rules": {
+        "comment_trigger": [";", "#"],
+        "color_change_trigger": [":", "."],
+        "keywords": ["mov", "push", "pop", "add", "sub", "jmp", "call", "ret", "syscall"],
+        "types": ["rax", "rbx", "rcx", "rdx", "rsi", "rdi", "rsp", "rbp"]
+    }
+}
