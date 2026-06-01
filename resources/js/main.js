@@ -9,6 +9,7 @@ const pathDisplay = document.getElementById('file-path');
 
 let currentFile = null;
 let currentFolder = null;
+let currentSelectedFolder = null;
 let lineStates = [];
 let currentSyntaxConfig = null;
 

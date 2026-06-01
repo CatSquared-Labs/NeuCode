@@ -41,7 +41,8 @@ async function createNewFile() {
     const fileName = prompt('Enter file name:');
     if (!fileName) return;
     
-    const filePath = `${currentFolder.replace(/\\$/g, '/')}/${fileName}`;
+    const targetFolder = currentSelectedFolder || currentFolder;
+    const filePath = `${targetFolder.replace(/\\$/g, '/')}/${fileName}`;
     
     try {
         await Neutralino.filesystem.writeFile(filePath, '');
@@ -63,7 +64,8 @@ async function createNewFolder() {
     const folderName = prompt('Enter folder name:');
     if (!folderName) return;
     
-    const folderPath = `${currentFolder.replace(/\\$/g, '/')}/${folderName}`;
+    const targetFolder = currentSelectedFolder || currentFolder;
+    const folderPath = `${targetFolder.replace(/\\$/g, '/')}/${folderName}`;
     
     try {
         await Neutralino.filesystem.createDirectory(folderPath);
@@ -124,6 +126,7 @@ async function loadDirectory(folderPath, container, depth = 0) {
                 childrenContainer.style.display = 'none';
                 item.addEventListener('click', async (e) => {
                     e.stopPropagation();
+                    currentSelectedFolder = fullPath;
                     const expanded = item.classList.toggle('expanded');
                     icon.innerText = expanded ? '▾' : '▸';
                     if (expanded && !childrenContainer.hasChildNodes()) {
