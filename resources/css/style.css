@@ -214,6 +214,7 @@ body, html {
     background-color: #16161e;
     color: var(--accent);
     border: 2px solid #24283b;
+    margin: 0px;
 }
 
 .tool-btn:hover {

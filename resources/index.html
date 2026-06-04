@@ -11,12 +11,28 @@
     <div id="toolbar">
         <div class="menu-item">
             <button class="tool-btn" id="file-btn" onclick="toggleMenu('file-menu')">File</button>
+            <button class="tool-btn" id="edit-btn" onclick="toggleMenu('edit-menu')">Edit</button>
+            <button class="tool-btn" id="git-btn" onclick="toggleMenu('git-menu')">Git</button>
             <div id="file-menu" class="dropdown-content">
                 <button onclick="openFile()">Open File</button>
                 <button onclick="openFolder()">Open Folder</button>
                 <div class="menu-sep"></div>
                 <button onclick="saveFile()">Save</button>
                 <button onclick="Neutralino.app.exit()">Exit</button>
+            </div>
+            <div id="edit-menu" class="dropdown-content">
+                <button onclick="undoEdit()">Undo</button>
+                <button onclick="redoEdit()">Redo</button>
+                <div class="menu-sep"></div>
+                <button onclick="cutText()">Cut</button>
+                <button onclick="copyText()">Copy</button>
+                <button onclick="pasteText()">Paste</button>
+            </div>
+            <div id="git-menu" class="dropdown-content">
+                <button onclick="gitInit()">Initialize Repository</button>
+                <button onclick="gitAdd()">Add Files</button>
+                <button onclick="gitCommit()">Commit Changes</button>
+                <button onclick="gitPush()">Push Changes</button>
             </div>
         </div>
         <div style="flex:1"></div>
@@ -55,6 +71,8 @@
     <script src="js/neutralino.js"></script>
     <script src="js/highlight.js"></script>
     <script src="js/toolbar/file.js"></script>
+    <script src="js/toolbar/git.js"></script>
+    <script src="js/toolbar/edit.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/file_explorer.js"></script>
