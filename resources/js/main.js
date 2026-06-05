@@ -97,6 +97,7 @@ editor.addEventListener('keydown', (e) => {
 window.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key === 'o') { e.preventDefault(); openFile(); }
     if (e.ctrlKey && e.key === 's') { e.preventDefault(); saveFile(); }
+    if (e.ctrlKey && e.key === 'f') { e.preventDefault(); openFindInMenu(); }
 });
 
 updateLines();

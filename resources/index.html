@@ -27,6 +27,14 @@
                 <button onclick="cutText()">Cut</button>
                 <button onclick="copyText()">Copy</button>
                 <button onclick="pasteText()">Paste</button>
+                <div class="menu-sep"></div>
+                <button onclick="openFindInMenu()">Find (Ctrl+F)</button>
+            </div>
+            <div id="find-input-container" class="find-input-container" style="display:none;">
+                <input type="text" id="find-text-input" placeholder="Find text..." />
+                <button onclick="findNext()">Next</button>
+                <button onclick="findPrev()">Prev</button>
+                <button onclick="closeFindInput()">Close</button>
             </div>
             <div id="git-menu" class="dropdown-content">
                 <button onclick="gitInit()">Initialize Repository</button>

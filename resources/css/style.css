@@ -54,6 +54,55 @@ body, html {
 
 .show { display: block; }
 
+.find-input-container {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    background: var(--sidebar);
+    border: 1px solid #24283b;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.find-input-container input {
+    background: var(--bg);
+    border: 1px solid #24283b;
+    color: var(--text);
+    padding: 6px 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    border-radius: 3px;
+    flex: 1;
+    min-width: 150px;
+    outline: none;
+}
+
+.find-input-container input:focus {
+    border-color: var(--accent);
+}
+
+.find-input-container button {
+    background: transparent;
+    border: 1px solid #24283b;
+    color: var(--text);
+    padding: 4px 8px;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.find-input-container button:hover {
+    background: #24283b;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
 #title-bar-text {
     color: var(--accent)
 }
