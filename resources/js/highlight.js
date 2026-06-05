@@ -63,6 +63,11 @@ function applyHighlight() {
             if (matchedTrigger) {
                 let isDecimal = /[0-9]/.test(line[i-1] || '') && /[0-9]/.test(line[i+matchedTrigger.length] || '');
                 if (!isDecimal) {
+                    // Make the word before the trigger use the same accent color as the word after it.
+                    out = out.replace(/(<span[^>]*>)([a-zA-Z0-9_]+)(<\/span>)$/,
+                                      '<span class="accent">$2</span>');
+                    out = out.replace(/([a-zA-Z0-9_]+)$/, '<span class="accent">$1</span>');
+
                     out += `<span>${matchedTrigger}</span>`;
                     i += matchedTrigger.length;
                     let nextWord = "";

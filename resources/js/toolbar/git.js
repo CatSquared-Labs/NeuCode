@@ -18,7 +18,17 @@ function gitCommit() {
 function gitPush() {
     const remote = prompt('Enter remote name (default: origin):') || 'origin';
     const branch = prompt('Enter branch name (default: main):') || 'main';
+    Neutralino.os.execCommand('git add .', function (data) {
+    });
     Neutralino.os.execCommand(`git push ${remote} ${branch}`, function (data) {
         alert('Changes pushed!');
+    });
+}
+
+function gitPull() {
+    const remote = prompt('Enter remote name (default: origin):') || 'origin';
+    const branch = prompt('Enter branch name (default: main):') || 'main';
+    Neutralino.os.execCommand(`git pull ${remote} ${branch}`, function (data) {
+        alert('Changes pulled!');
     });
 }
